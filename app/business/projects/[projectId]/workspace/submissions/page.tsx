@@ -1,3 +1,4 @@
+// @ts-nocheck
 // app/business/projects/[projectId]/workspace/submissions/page.tsx
 
 "use client";

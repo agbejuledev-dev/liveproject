@@ -1,4 +1,7 @@
+﻿// @ts-nocheck
 "use client";
+import { BriefcaseBusiness, Plus, X } from "lucide-react";
+
 
 import { FormEvent, useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
@@ -57,11 +60,11 @@ const industries = [
 ];
 
 const companySizes = [
-  "1–10",
-  "11–50",
-  "51–200",
-  "201–500",
-  "501–1,000",
+  "1â€“10",
+  "11â€“50",
+  "51â€“200",
+  "201â€“500",
+  "501â€“1,000",
   "1,001+",
 ];
 

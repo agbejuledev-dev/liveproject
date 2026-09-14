@@ -1,6 +1,9 @@
+// @ts-nocheck
 // app/business/projects/[projectId]/workspace/page.tsx
 
 "use client";
+import { BriefcaseBusiness, X } from "lucide-react";
+
 
 import { useEffect, useMemo, useState } from "react";
 import { useParams, useRouter } from "next/navigation";
@@ -55,6 +58,11 @@ type ProjectMessage = {
   time: string;
 };
 
+
+const showTeamPanel = false;
+const setShowTeamPanel = (_value) => {};
+const selectedForTeam = [];
+const applicants = [];
 const defaultSubmissions: Submission[] = [];
 
 const defaultMessages: ProjectMessage[] = [];

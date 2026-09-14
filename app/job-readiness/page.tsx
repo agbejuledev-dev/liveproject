@@ -1,5 +1,12 @@
 "use client";
 
+function getStoredLocalStorage(key: string): string | null {
+  if (typeof window === "undefined") {
+    return null;
+  }
+
+  return window.localStorage.getItem(key);
+}
 import {
   AlertCircle,
   ArrowLeft,
@@ -166,7 +173,7 @@ function collectProjects() {
   const verified = safeParse<
     ProjectRecord[] | { experiences?: ProjectRecord[] }
   >(
-    localStorage.getItem(STORAGE.verifiedExperience)
+    getStoredLocalStorage(STORAGE.verifiedExperience)
   );
 
   const verifiedList = Array.isArray(verified)
@@ -188,7 +195,7 @@ function collectProjects() {
     ) {
       add(
         safeParse<ProjectRecord>(
-          localStorage.getItem(key)
+          getStoredLocalStorage(key)
         )
       );
     }
@@ -210,7 +217,7 @@ function collectCompletedCourses() {
     }
 
     const progress = safeParse<CourseProgress>(
-      localStorage.getItem(key)
+      getStoredLocalStorage(key)
     );
 
     if (!progress) continue;
@@ -243,7 +250,7 @@ function collectApplications() {
   if (typeof window === "undefined") return [];
 
   const stored = safeParse<unknown[]>(
-    localStorage.getItem(STORAGE.applications)
+    getStoredLocalStorage(STORAGE.applications)
   );
 
   if (!Array.isArray(stored)) return [];
@@ -259,7 +266,7 @@ function collectSavedJobs() {
   if (typeof window === "undefined") return [];
 
   const stored = safeParse<unknown[]>(
-    localStorage.getItem(STORAGE.savedJobs)
+    getStoredLocalStorage(STORAGE.savedJobs)
   );
 
   if (!Array.isArray(stored)) return [];
@@ -399,13 +406,13 @@ export default function JobReadinessPage() {
     const hasActiveAlert =
       Boolean(
         safeParse<unknown[]>(
-          localStorage.getItem(
+          getStoredLocalStorage(
             "liveproject_job_alerts"
           )
         ) &&
           (
             safeParse<unknown[]>(
-              localStorage.getItem(
+              getStoredLocalStorage(
                 "liveproject_job_alerts"
               )
             ) ?? []

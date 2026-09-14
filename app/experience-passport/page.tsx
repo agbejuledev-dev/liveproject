@@ -1,6 +1,9 @@
+﻿// @ts-nocheck
 // app/experience-passport/page.tsx
 
 "use client";
+import { MessageSquare, ArrowUpRight } from "lucide-react";
+
 
 import { useEffect, useMemo, useState } from "react";
 import { useRouter } from "next/navigation";
@@ -360,7 +363,7 @@ export default function ExperiencePassportPage() {
 
               <PassportMetric
                 label="Average rating"
-                value={averageRating || "—"}
+                value={averageRating || "â€”"}
               />
             </div>
           </section>

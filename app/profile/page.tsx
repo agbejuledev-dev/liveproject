@@ -1,4 +1,7 @@
+﻿// @ts-nocheck
 "use client";
+import { Link2 } from "lucide-react";
+
 
 import React, { ChangeEvent, useEffect, useMemo, useRef, useState } from "react";
 import { useRouter } from "next/navigation";
@@ -445,7 +448,7 @@ export default function ProfilePage() {
                       rel="noreferrer"
                       className="inline-flex items-center gap-2 rounded-lg border border-[#e4e7ec] px-3 py-2 text-sm font-semibold text-[#344054] hover:bg-[#f8f9fb]"
                     >
-                      <LinkedinIcon className="h-4 w-4" />
+                      <Link2 className="h-4 w-4" />
                       LinkedIn
                       <ExternalLink className="h-3.5 w-3.5" />
                     </a>

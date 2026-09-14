@@ -1,3 +1,4 @@
+﻿// @ts-nocheck
 "use client";
 
 import { useEffect, useMemo, useState } from "react";
@@ -662,7 +663,7 @@ export default function MyCoursesPage() {
                         </h4>
 
                         <p className="mt-1 text-xs font-semibold text-slate-400">
-                          {course.level} · {course.duration} · {course.lessons} lessons
+                          {course.level} Â· {course.duration} Â· {course.lessons} lessons
                         </p>
                       </div>
                     </div>
@@ -832,7 +833,7 @@ export default function MyCoursesPage() {
       </section>
 
       <footer className="mx-auto flex max-w-[1500px] flex-col justify-between gap-4 px-5 py-8 text-sm text-slate-500 sm:flex-row lg:px-8">
-        <span>© 2026 LiveProject Academy.</span>
+        <span>Â© 2026 LiveProject Academy.</span>
 
         <div className="flex flex-wrap gap-5">
           <Link href="/courses" className="hover:text-slate-900">

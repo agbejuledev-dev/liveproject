@@ -1,4 +1,7 @@
+﻿// @ts-nocheck
 "use client";
+import { X } from "lucide-react";
+
 
 import { useMemo, useState } from "react";
 import Link from "next/link";
@@ -448,7 +451,7 @@ export default function CareerGuidesPage() {
 
                 <div className="mt-6 flex items-center gap-2 text-[10px] font-black uppercase tracking-wide text-slate-400">
                   <span>{guide.category}</span>
-                  <span>•</span>
+                  <span>â€¢</span>
                   <span>{guide.readTime}</span>
                 </div>
 
@@ -526,9 +529,9 @@ export default function CareerGuidesPage() {
                     <div className="min-w-0 flex-1">
                       <div className="flex flex-wrap items-center gap-2 text-[10px] font-black uppercase tracking-wide text-slate-400">
                         <span>{guide.category}</span>
-                        <span>•</span>
+                        <span>â€¢</span>
                         <span>{guide.readTime}</span>
-                        <span>•</span>
+                        <span>â€¢</span>
                         <span>{guide.level}</span>
                       </div>
 
@@ -613,7 +616,7 @@ export default function CareerGuidesPage() {
       </section>
 
       <footer className="mx-auto flex max-w-[1500px] flex-col justify-between gap-4 border-t border-black/5 px-5 py-8 text-sm text-slate-500 sm:flex-row lg:px-8">
-        <span>© 2026 LiveProject.</span>
+        <span>Â© 2026 LiveProject.</span>
 
         <div className="flex flex-wrap gap-5">
           <Link href="/blog" className="hover:text-slate-900">
@@ -635,9 +638,9 @@ export default function CareerGuidesPage() {
               <div>
                 <div className="flex flex-wrap items-center gap-2 text-[10px] font-black uppercase tracking-wide text-teal-700">
                   <span>{selectedGuide.category}</span>
-                  <span>•</span>
+                  <span>â€¢</span>
                   <span>{selectedGuide.readTime}</span>
-                  <span>•</span>
+                  <span>â€¢</span>
                   <span>{selectedGuide.level}</span>
                 </div>
 

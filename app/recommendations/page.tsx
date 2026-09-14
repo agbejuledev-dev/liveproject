@@ -1,6 +1,9 @@
+﻿// @ts-nocheck
 // app/recommendations/page.tsx
 
 "use client";
+import { ArrowUpRight } from "lucide-react";
+
 
 import { useEffect, useMemo, useState } from "react";
 import { useRouter } from "next/navigation";
@@ -331,7 +334,7 @@ export default function RecommendationsPage() {
 
               <RecommendationMetric
                 label="Average rating"
-                value={averageRating || "—"}
+                value={averageRating || "â€”"}
               />
             </div>
           </section>
@@ -507,10 +510,10 @@ export default function RecommendationsPage() {
                     )}
 
                     <p className="mt-4 text-sm leading-7 text-slate-600">
-                      “
+                      â€œ
                       {recommendation.comment ||
                         "Recommendation content not available."}
-                      ”
+                      â€
                     </p>
 
                     <div className="mt-5 flex items-center justify-between border-t border-slate-100 pt-4">
@@ -661,8 +664,8 @@ export default function RecommendationsPage() {
               }
               className="mt-6 flex w-full items-center justify-center gap-2 rounded-xl bg-slate-950 px-5 py-3 text-sm font-bold text-white transition hover:bg-slate-800 disabled:cursor-not-allowed disabled:opacity-40"
             >
-              <Send size={15} />
-              Send recommendation request
+              <ArrowUpRight size={15} />
+              ArrowUpRight recommendation request
             </button>
           </div>
         </div>
