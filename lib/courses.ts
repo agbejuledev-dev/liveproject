@@ -186,3 +186,5 @@ export const allCourses = courses;
 export function getCourseById(id: string) {
   return allCourses.find((course) => course.id === id);
 }
+export const getCourse = getCourseById;
+
